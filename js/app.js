@@ -31,6 +31,7 @@ function showPhotos(data) {
           <div class="photo__cover-inner">
           <a href=${photo.img_src} class="imaguru"><img
               src=${photo.img_src}
+              loading="lazy"
               alt="${photo.camera.full_name}"
               class="photo__cover"
               style="width:240px;height:215px"
