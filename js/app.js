@@ -29,7 +29,7 @@ function showPhotos(data) {
       photoEl.innerHTML = `
     <div class="photo">
           <div class="photo__cover-inner">
-          <a href=${photo.img_src} class="imaguru"><img
+          <a href=${photo.img_src} class="imaguru" target="_blanc"><img
               src=${photo.img_src}
               loading="lazy"
               alt="${photo.camera.full_name}"
