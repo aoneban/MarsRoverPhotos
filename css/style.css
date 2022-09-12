@@ -5,25 +5,10 @@
 }
 
 body {
-<<<<<<< HEAD
-    background-image: url(https://aoneban.github.io/MarsRoverPhotos/images/mars.jpg);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-=======
   background: url(../images/mars.jpg);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
->>>>>>> 56cd582 (correct css)
 }
 
 .container {
