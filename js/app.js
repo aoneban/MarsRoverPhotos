@@ -25,7 +25,6 @@ function showPhotos(data) {
     if (photo.id % 2 !== 0) {
       const photoEl = document.createElement("div");
       photoEl.classList.add("photo");
-      console.log(photosEl.length);
       photoEl.innerHTML = `
     <div class="photo">
           <div class="photo__cover-inner">
