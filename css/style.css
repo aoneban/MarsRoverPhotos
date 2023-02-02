@@ -9,6 +9,15 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.btn {
+  padding: 0 2px;
+  cursor: pointer;
 }
 
 .container {
@@ -76,6 +85,12 @@ body {
   background: rgba(211, 68, 0, 0.5);
   color: #fff;
   font-size: 0.5em;
+}
+
+.pagination {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .years__info {
