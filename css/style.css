@@ -15,6 +15,10 @@ body {
   background-size: cover;
 }
 
+.btn {
+  padding: 0 2px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -80,6 +84,12 @@ body {
   background: rgba(211, 68, 0, 0.5);
   color: #fff;
   font-size: 0.5em;
+}
+
+.pagination {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .years__info {
