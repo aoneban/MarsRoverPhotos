@@ -17,6 +17,7 @@ body {
 
 .btn {
   padding: 0 2px;
+  cursor: pointer;
 }
 
 .container {
