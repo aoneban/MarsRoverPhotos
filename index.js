@@ -7,4 +7,6 @@ showPhotos(0, numberOfPhotosPerPage);
 generateButtons();
 listenerForButtons();
 
-
+export function myFunc(e){
+    console.log(e.currentTarget)
+}

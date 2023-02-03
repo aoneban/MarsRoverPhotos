@@ -55,6 +55,13 @@ body {
   position: relative;
 }
 
+.img-size {
+  width: 240px;
+  height: 215px;
+  cursor: pointer;
+}
+
+
 .photo__cover {
   box-shadow: 1px 1px 25px 2px rgb(152, 113, 5);
 }
