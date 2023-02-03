@@ -1,4 +1,5 @@
 import { getAPI } from "./api.js";
+import { sliderPhotos } from "./utils.js";
 
 export async function showPhotos(a, b) {
   const data = await getArrayPhotos(a, b);
@@ -7,25 +8,34 @@ export async function showPhotos(a, b) {
   data.forEach((photo) => {
     const photoEl = document.createElement('div');
     photoEl.classList.add('photo');
-    photoEl.innerHTML = `
-          <div class="photo">
-            <div class="photo__cover-inner">
-            <a href=${photo.img_src} target="_blanc">
-              <img
-                src=${photo.img_src}
-                loading="lazy"
-                alt="${photo.camera.full_name}"
-                style="width:240px;height:215px"
-              /></a>
-            </div>
-            <div class="photo__info">
-              <div class="photo__title">Rover name: ${photo.rover.name}</div>
-              <div class="photo__title">Camera name: ${photo.camera.full_name}</div>
-              <div class="photo__category">Data: ${photo.earth_date}</div>
-              <div class="photo__average photo__average--">${photo.rover.name}</div>
-            </div>
-          </div>
-      `;
+
+    const imgWrapper = document.createElement('div');
+    imgWrapper.classList.add('photo__cover-inner');
+    const img = document.createElement('img');
+    img.classList.add('img-size');
+    img.addEventListener('click', sliderPhotos);
+    img.src = photo.img_src;
+    img.alt = photo.camera.full_name;
+    imgWrapper.append(img);
+    
+    const imgInfo = document.createElement('div');
+    imgInfo.classList.add('photo__info');
+
+    const photoTitle = document.createElement('p');
+    photoTitle.classList.add('photo__title');
+    photoTitle.textContent = `Rover name: ${photo.rover.name}`;
+    const photoTitleTwo = document.createElement('p');
+    photoTitleTwo.classList.add('photo__title');
+    photoTitleTwo.textContent = `Camera name: ${photo.camera.full_name}`;
+    const imgCategory = document.createElement('p');
+    imgCategory.classList.add('photo__category');
+    imgCategory.textContent = `Data: ${photo.earth_date}`;
+    const average = document.createElement('p');
+    average.classList.add('photo__average');
+    average.textContent = photo.rover.name
+
+    imgInfo.append(photoTitle, photoTitleTwo, imgCategory, average)
+    photoEl.append(imgWrapper, imgInfo );
     photosEl.appendChild(photoEl);
   });
 }

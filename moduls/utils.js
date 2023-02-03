@@ -44,3 +44,18 @@ export function listenerForButtons() {
     }
   });
 }
+
+export function sliderPhotos() {
+  const modal = document.getElementById('myModal');
+  const modalImg = document.getElementById('img01');
+  const captionText = document.getElementById('caption');
+
+  modal.style.display = 'block';
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+
+  const span = document.getElementsByClassName('close')[0];
+  span.onclick = function () {
+    modal.style.display = 'none';
+  };
+}

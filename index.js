@@ -6,5 +6,3 @@ getAPI();
 showPhotos(0, numberOfPhotosPerPage);
 generateButtons();
 listenerForButtons();
-
-
