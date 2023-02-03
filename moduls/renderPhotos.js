@@ -1,5 +1,5 @@
 import { getAPI } from "./api.js";
-import { myFunc } from "../index.js";
+import { sliderPhotos } from "./utils.js";
 
 export async function showPhotos(a, b) {
   const data = await getArrayPhotos(a, b);
@@ -13,7 +13,7 @@ export async function showPhotos(a, b) {
     imgWrapper.classList.add('photo__cover-inner');
     const img = document.createElement('img');
     img.classList.add('img-size');
-    img.addEventListener('click', myFunc);
+    img.addEventListener('click', sliderPhotos);
     img.src = photo.img_src;
     img.alt = photo.camera.full_name;
     imgWrapper.append(img);
