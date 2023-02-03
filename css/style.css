@@ -18,6 +18,9 @@ body {
 .btn {
   padding: 0 2px;
   cursor: pointer;
+  border: none;
+  background: none;
+  color: #fff;
 }
 
 .container {
