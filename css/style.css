@@ -97,6 +97,19 @@ body {
   font-size: 0.5em;
 }
 
+.photo__cover-inner{
+  overflow: hidden;
+}
+
+.photo__cover-inner > img{
+  transition: 1s; /* Время эффекта */
+  display: block; /* Убираем небольшой отступ снизу */
+}
+
+.photo__cover-inner > img:hover{
+  transform: scale(1.2);
+}
+
 .pagination {
   display: block;
   margin: 0 auto;
